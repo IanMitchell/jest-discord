@@ -1,0 +1,28 @@
+{
+  "name": "jest-discord",
+  "version": "0.0.1",
+  "description": "A Jest plugin for testing discord.js bots",
+  "author": "Ian Mitchell <ian.mitchel1@live.com>",
+  "homepage": "https://github.com/ianmitchell/jest-discord",
+  "repository": "ianmitchell/jest-discord",
+  "main": "index.js",
+  "license": "MIT",
+  "keywords": [
+    "discord",
+    "bot",
+    "jest",
+    "testing",
+    "node"
+  ],
+  "scripts": {},
+  "dependencies": {
+    "discord.js": "^11.4.2",
+    "jest-diff": "^23.5.0",
+    "jest-matcher-utils": "^23.5.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.4.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0"
+  }
+}
