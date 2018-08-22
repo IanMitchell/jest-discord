@@ -1,6 +1,6 @@
 /* global expect */
 
-import toBeMessage from './src/assertions/toBeMessage';
+import toBeMessage from './assertions/toBeMessage';
 
 expect.extend({
   toBeMessage,
