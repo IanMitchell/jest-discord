@@ -1,5 +1,6 @@
 {
-  "name": "jest-discord",
+  "name": "jest-discord-lerna",
+  "private": true,
   "version": "0.0.1",
   "description": "A Jest plugin for testing discord.js bots",
   "author": "Ian Mitchell <ian.mitchel1@live.com>",
@@ -37,5 +38,9 @@
     "presets": [
       "./babel.config.json"
     ]
+  },
+  "dependencies": {
+    "jest-discord": "file:packages/jest-discord",
+    "jest-environment-discord": "file:packages/jest-environment-discord"
   }
 }
