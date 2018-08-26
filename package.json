@@ -34,11 +34,6 @@
     "eslint-plugin-import": "^2.14.0",
     "lerna": "^3.0.0-beta.20"
   },
-  "babel": {
-    "presets": [
-      "./babel.config.json"
-    ]
-  },
   "dependencies": {
     "jest-discord": "file:packages/jest-discord",
     "jest-environment-discord": "file:packages/jest-environment-discord"

@@ -1,7 +1,7 @@
 import Discord from 'discord.js';
 
 const DEFAULTS = {
-  TIMEOUT: 3,
+  TIMEOUT: 5,
 };
 
 export default class TestBot extends Discord.Client {
@@ -30,7 +30,7 @@ export default class TestBot extends Discord.Client {
         .send(message)
         .then(() => {
           channel.awaitMessages(
-            (msg) => msg.content,
+            (msg) => msg,
             { max: 1, time: timeout * 1000, errors: ['time'] },
           ).then(msgs => resolve(msgs.first()));
         });
