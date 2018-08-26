@@ -1,2 +1,3 @@
 # Dependencies and Build
 node_modules
+packages/*/lib

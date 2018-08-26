@@ -1,11 +1,11 @@
 {
-  "name": "jest-discord",
+  "name": "jest-discord-lerna",
+  "private": true,
   "version": "0.0.1",
   "description": "A Jest plugin for testing discord.js bots",
   "author": "Ian Mitchell <ian.mitchel1@live.com>",
   "homepage": "https://github.com/ianmitchell/jest-discord",
   "repository": "ianmitchell/jest-discord",
-  "main": "index.js",
   "license": "MIT",
   "keywords": [
     "discord",
@@ -14,15 +14,28 @@
     "testing",
     "node"
   ],
-  "scripts": {},
-  "dependencies": {
-    "discord.js": "^11.4.2",
-    "jest-diff": "^23.5.0",
-    "jest-matcher-utils": "^23.5.0"
+  "scripts": {
+    "clean": "lerna exec -- rm -rf ./lib",
+    "build": "lerna exec -- babel src --out-dir lib --copy-files",
+    "prerelease": "npm run clean && npm run build",
+    "release": "lerna publish --independent"
   },
   "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-eslint": "^8.2.1",
+    "babel-jest": "^10.0.1",
+    "babel-plugin-add-module-exports": "^0.3.3",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-plugin-transform-replace-object-assign": "^0.2.1",
+    "babel-preset-airbnb": "^2.4.0",
+    "babel-preset-env": "^1.5.2",
     "eslint": "^5.4.0",
     "eslint-config-airbnb-base": "^13.1.0",
-    "eslint-plugin-import": "^2.14.0"
+    "eslint-plugin-import": "^2.14.0",
+    "lerna": "^3.0.0-beta.20"
+  },
+  "dependencies": {
+    "jest-discord": "file:packages/jest-discord",
+    "jest-environment-discord": "file:packages/jest-environment-discord"
   }
 }
